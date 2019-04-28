@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>翼企调度平台打补丁工具</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="lib/jquery-3.1.0.min.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+    <div id="mainContainer" class="mainContainer">
+        <div class="contentTitle">翼企调度平台打补丁工具</div>
+        <div id="leftPanel" class="leftPanel">           
+            <h4>输入路径</h4>
+            <div id="inputPath">
+                <textarea id="inputText" class="inputText" name="pathText" ></textarea>
+            </div>
+            <button id="excute" class="excuteBtn">执行</button>
+            <p>注：使用过程如有疑问联系张冠鹏</p>            
+        </div>
+        <div id="rightPanel" class="rightPanel">
+            <h4>输出路径</h4>
+            <div id="outputPath" class="pathInfo"></div>
+        </div>
+    </div>
+    <div class="useMethod">
+        <h4>使用方法</h4>
+        <p>
+            1. 安装node.js环境<br>
+            2. 修改根目录下server.js文件中的fileRootPath变量，改为自己工程的路径<br>
+            3. 使用命令提示符工具进入到当前打补丁工具根目录<br>
+            4. 执行" node server.js "命令<br>
+            5. 在浏览器中输入 "http://localhost:8081/"<br>
+            6. 严格按照 "cn/com/ctsi/cop/controller/ReviewController.class" , "templates/review/todo/list.ftl", "static/css/ctsi.css"这样的格式输入需要打补丁的路径，一行一条<br>
+            7. 点击 “执行”按钮，在根目录下会有一个output文件夹，里面的文件即为补丁文件<br>
+            <br>
+        </p>
+    </div>
+</body>
+</html>
